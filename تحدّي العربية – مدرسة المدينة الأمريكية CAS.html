@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>تحدّي العربية – مدرسة المدينة الأمريكية CAS</title>
+<style>
+:root{--n:#14305c;--n2:#1d4380;--n3:#0e2447;--o:#ff8a1f;--w:#fff;--g:#2ecc71;--r:#e74c3c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:radial-gradient(circle at top,var(--n2),var(--n3));color:var(--w);font-family:"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column}
+header{background:var(--n3);border-bottom:4px solid var(--o);padding:12px;text-align:center;font-weight:700;font-size:1.15rem}
+header small{display:block;color:var(--o);font-size:.85rem;margin-top:2px}
+footer{background:var(--n3);border-top:3px solid var(--o);padding:10px;text-align:center;font-size:.85rem;margin-top:auto}
+main{max-width:1000px;width:100%;margin:0 auto;padding:16px}
+.card{background:var(--n);border:2px solid var(--n2);border-radius:16px;padding:18px;box-shadow:0 6px 18px #0005}
+.home{text-align:center}.home h1{color:var(--o);margin:.2em 0}
+#qr{display:inline-block;background:#fff;padding:12px;border-radius:12px;margin:10px}
+.paths{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.path{flex:1;min-width:200px;cursor:pointer;background:var(--n2);border:3px solid var(--o);border-radius:16px;padding:18px;font-size:1.3rem;font-weight:700;color:#fff;transition:.2s}
+.path:hover{transform:translateY(-4px);background:var(--o);color:var(--n3)}.path small{display:block;font-weight:400;font-size:.85rem;margin-top:6px}
+.btn{background:var(--o);color:var(--n3);border:0;border-radius:10px;padding:10px 22px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;margin-top:10px}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.bar{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.95rem;margin-bottom:8px}
+.tb{height:10px;background:var(--n3);border-radius:8px;overflow:hidden;margin-bottom:12px}.tb i{display:block;height:100%;background:var(--o);width:100%;transition:width 1s linear}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}.grid.p{grid-template-columns:5fr 6fr}
+@media(max-width:760px){.grid.p{grid-template-columns:1fr}}
+.pass{background:#fff;color:#1a1a2e;border-radius:14px;padding:14px;line-height:2;max-height:70vh;overflow:auto;position:sticky;top:8px;align-self:start;border-right:6px solid var(--o)}
+.pass h4{margin:0 0 6px;color:var(--n)}
+.q{font-size:1.15rem;font-weight:700;margin-bottom:12px;line-height:1.8}
+.opt{display:block;width:100%;text-align:right;background:var(--n2);color:#fff;border:2px solid transparent;border-radius:12px;padding:12px;margin:8px 0;font-size:1rem;cursor:pointer;font-family:inherit}
+.opt:hover:not(:disabled){border-color:var(--o)}.opt.ok{background:var(--g);color:#06361b}.opt.no{background:var(--r)}
+.pool{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;min-height:44px}
+.chip{background:var(--o);color:var(--n3);padding:8px 14px;border-radius:20px;font-weight:700;cursor:grab;user-select:none}.chip.s{outline:3px solid #fff}
+.zone{display:inline-block;min-width:110px;min-height:38px;border:2px dashed var(--o);border-radius:10px;padding:4px 10px;vertical-align:middle;background:var(--n3);text-align:center}
+.zone.ok{border-color:var(--g);border-style:solid}.zone.no{border-color:var(--r);border-style:solid}
+.row{margin:10px 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row b{min-width:110px}
+.fb{margin-top:12px;padding:12px;border-radius:12px;background:var(--n3);border-right:6px solid var(--o);line-height:1.8}.fb.ok{border-color:var(--g)}.fb.no{border-color:var(--r)}
+.big{font-size:3rem}.mk{font-size:2.2rem;color:var(--o);font-weight:800}
+.cert{background:#fffdf5;color:#1a1a2e;border:10px double var(--o);border-radius:6px;padding:26px;text-align:center;margin:14px 0}
+.cert h2{color:var(--n);font-size:2rem;margin:.2em}.cert .nm{font-size:1.8rem;color:var(--o);font-weight:800;border-bottom:2px solid var(--n);display:inline-block;padding:0 24px;margin:8px}
+input{padding:10px;border-radius:10px;border:2px solid var(--o);font-size:1rem;font-family:inherit;min-width:230px;text-align:center}
+@media print{body *{visibility:hidden}.cert,.cert *{visibility:visible}.cert{position:absolute;inset:0;margin:0}}
+</style></head><body>
+<header>مدرسة المدينة الأمريكية - CAS<small>تحدّي اللغة العربية • مراجعة الفصل الدراسي الأول 2026</small></header>
+<main id="m"></main>
+<footer>تصميم وإشراف وإعداد: أ. نبيل أحمد العاسمي • مدرسة المدينة الأمريكية - CAS</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const M=(q,o,a,f)=>({t:'m',q,o,a,f}),T=(q,a,f)=>({t:'m',q,o:['صح','خطأ'],a:a?0:1,f}),
+F=(q,a,d,f)=>({t:'z',q,z:[['',a]],ch:[a,...d],f}),Z=(q,p,f,x=[])=>({t:'z',q,z:p,ch:[...p.map(e=>e[1]),...x],f});
+const P_POEM9=`<h4>أبيات شعرية</h4>١- غَذَوتُكَ مولوداً وعُلتُكَ يافعاً تُعَلُّ بما أُدني عليكَ وتَنهَلُ<br>٢- تخافُ الرَّدى نفسي عليكَ وإنّها لَتعلمُ أنّ الموتَ حتمٌ مؤجَّلُ<br>٣- فلمّا بلغتَ السنَّ والغايةَ التي إليها مدى ما كنتُ فيكَ أؤمِّلُ<br>٤- جعلتَ جزائي منكَ جبهاً وغِلظةً كأنّكَ أنتَ المنعِمُ المتفضِّلُ<br>٥- تراهُ معدّاً للخلافِ كأنّه بردٍّ على أهلِ الصوابِ مُوكَّلُ`;
+const P_STORY=`<h4>قصة «الهدية»</h4>كان (جيم) و(ديلا) زوجين فقيرين يعيشان في غرفة صغيرة، لكنهما كانا يتبادلان حبًّا عظيمًا. ومع اقتراب عيد الميلاد، أخذت (ديلا) تفكر في الهدية التي ستقدمها لزوجها، ولم تكن تملك سوى مبلغ زهيد، وكذلك كان (جيم).<br>كان (جيم) يعرف أن (ديلا) تفخر بشعرها الطويل الجميل، فقرر أن يشتري لها أمشاطًا ملونة كانت تحلم بها، وكانت (ديلا) تعرف أن زوجها يعتز بساعة ذهبية قديمة ورثها عن والده، فقررت أن تشتري له سلسلة ثمينة يعلق بها ساعته. قرر كل منهما على انفراد أن يجد حلًّا لشراء الهدية.<br>في المساء عاد (جيم) إلى المنزل وقدّم هديته المغلفة، فابتسمت بفرح وقدمت له هديتها. وحين فتحت (ديلا) العلبة وجدت أمشاطًا ثمينة كانت تحلم باقتنائها، ووجد (جيم) السلسلة التي كان يتمناها.<br>لكنّ المفاجأة كانت أكبر مما توقعا؛ فقد باع (جيم) ساعته الذهبية ليشتري الأمشاط، بينما كشفت (ديلا) عن شعرها القصير المقصوص، فقد باعت خصل شعرها الطويلة لتشتري له السلسلة.`;
+const P_FA=`<h4>نص</h4>الإنسان العاقل يعلم أن الحياة قصيرة وأن السعادة فيها تأتي من الرضا ومن القناعة والثقة بأمر الله وقضائه، والمُتواضِع في حياته يشعر بالسعادة أكثر من المُتكبِّر، والحياة لا تخلو منهما أبدًا، لذلك فالإنسان الصالح هو من يعمل لدنياه وآخرته.`;
+const P_BAL=`<h4>نص</h4>«العلمُ نورٌ فاحرص عليه، والجهلُ ظلامٌ فابتعد عنه.»<br><b>التشبيه البليغ:</b> تشبيه فيه المشبه والمشبه به فقط.<br>مثال: أمي جنة / المقاتل الشجاع أسد / العلم نور`;
+const P_POEM8=`<h4>من حكم الحياة – الإمام الشافعي</h4>١- دَعِ الأيّامَ تفعلُ ما تشاءُ وطِبْ نفساً إذا حكمَ القضاءُ<br>٢- ولا تجزعْ لحادثةِ الليالي فما لحوادثِ الدنيا بقاءُ<br>٣- وكُنْ رجلاً على الأهوالِ جلداً وشيمتُكَ السماحةُ والوفاءُ<br>٤- وإنْ كثرتْ عيوبُكَ في البرايا وسرَّكَ أنْ يكونَ لها غطاءُ<br>٥- تستَّرْ بالسخاءِ فكلُّ عيبٍ يغطّيهِ كما قيلَ السخاءُ<br>٦- ولا تُرِ للأعادي قطُّ ذلاًّ فإنَّ شماتةَ الأعداءِ بلاءُ`;
+const P_READ=`<h4>القراءة عادة تصنع المستقبل</h4>تُعد القراءة من أهم العادات التي تساعد الإنسان على تطوير نفسه وتوسيع مداركه، فهي تمنحه فرصة لاكتساب المعلومات والتعرف إلى ثقافات مختلفة، كما تساعد الطلاب على تحسين لغتهم وتنمية قدرتهم على التفكير والتعبير. ولا تقتصر فوائدها على الدراسة، بل تمتد إلى الحياة اليومية.<br>ومع انتشار الأجهزة الذكية أصبح كثير من الطلاب يقضون أوقاتًا طويلة في متابعة المحتوى الترفيهي، مما قلل اهتمامهم بالقراءة، وقد يؤدي الابتعاد عنها إلى ضعف الحصيلة اللغوية وقلة المعرفة.<br>ولتشجيع الطلاب يمكن تخصيص وقت يومي للقراءة، واختيار الكتب المناسبة، وتبادلها مع الأصدقاء، والمشاركة في المسابقات. فالقراءة وسيلة لبناء العقل وتنمية الشخصية.`;
+const P_HAL=`<h4>قطعة الحال</h4>دخل المعلم الفصل مبتسمًا، ووقف الطلاب وهم مستعدون لاستقباله، ثم جلس الجميع في هدوء كي يستمعوا إلى الشرح، وشارك أحد الطلاب متحمسًا، بينما عرض زميله إجابته وهو واثق من نفسه، وفي نهاية الحصة خرج الطلاب فرحين بما تعلموه.`;
+const D={9:[
+{n:'النص الشعري',ic:'📜',p:P_POEM9,q:[
+M('ما الشعور السائد في الأبيات؟',['المودة والعتاب','ندم على ما حدث','فخر الأب بابنه','السعادة والفرح'],0,'الأب يذكّر ابنه بإحسانه ويعاتبه على جفائه، فالشعور هو المودة والعتاب.'),
+M('في أي الأبيات وصف الشاعر ابنه بأنه جاهز دائمًا للصدام مع أبيه؟',['الأول','الثالث','الرابع','الخامس'],3,'البيت الخامس: «تراه معدًّا للخلاف».'),
+M('معنى كلمة «عُلتُك»:',['كفيتك من الموت','كفيتك طعامك وشرابك','أصبتُ بالمرض'],1,'عالَ فلانًا: قام بالإنفاق عليه وكفاه حاجاته.'),
+F('يذكّر الشاعر ابنه بما قدمه له صغيرًا ليبيّن ___ بين معاملته لابنه ومعاملة ابنه له.','الفرق',['التشابه','الندم'],'ليظهر الفرق بين إحسانه وجفاء ابنه.'),
+M('متى بدأ الابن بمجافاة والده؟',['وهو رضيع','عندما بلغ سن الرشد والقوة','عندما مرض أبوه'],1,'البيت الثالث: «فلمّا بلغتَ السنَّ والغاية».')]},
+{n:'قصة الهدية',ic:'🎁',p:P_STORY,q:[
+M('ما المشكلة الأساسية التي واجهت جيم وديلا قبل العيد؟',['اختلافهما حول الهدية','عدم امتلاكهما المال الكافي','عدم رغبتهما بالاحتفال','انشغالهما بالعمل'],1,'كانا فقيرين ولا يملكان إلا مبلغًا زهيدًا.'),
+M('ما الدافع الحقيقي لبيع ديلا شعرها؟',['تغيير مظهرها','حاجتها إلى المال لشراء هدية لزوجها','التخلص من شعرها','شراء ملابس'],1,'باعته لتشتري له السلسلة.'),
+M('ما المفارقة الأساسية في القصة؟',['نسيا موعد العيد','اشتريا الهدية نفسها','لم يعد للهدايا فائدة بعد بيع الشيء المرتبط بها','لم تعجبهما الهدايا'],2,'لا فائدة للسلسلة بعد بيع الساعة ولا للأمشاط بعد قص الشعر. نوعها: مفارقة سياقية.'),
+M('ما الفكرة الضمنية الأعمق في القصة؟',['المظاهر أساس السعادة','قيمة الهدية في ثمنها','التضحية الصادقة أسمى من قيمة الأشياء المادية','ألا نقدم الهدايا'],2,'الحب الصادق يدفع الإنسان إلى التضحية.'),
+Z('طابق كل شخصية بما فعلته:',[['جيم باع','الساعة الذهبية'],['ديلا باعت','شعرها الطويل'],['جيم اشترى','أمشاطًا'],['ديلا اشترت','سلسلة']],'جيم باع ساعته واشترى الأمشاط، وديلا باعت شعرها واشترت السلسلة.'),
+T('كان تصرف جيم وديلا عاطفيًّا لا حكيمًا.',true,'كل منهما فكّر بالآخر ولم يخبره، وباعا أغلى ما يملكان.')]},
+{n:'اسم الفاعل',ic:'✍️',p:P_FA,q:[
+F('يُصاغ اسم الفاعل من الفعل الثلاثي على وزن ___ .','فاعل',['مُفعِل','فعيل'],'مثل: كتب ← كاتب.'),
+Z('صُغ اسم الفاعل من كل فعل:',[['خاف','خائِف'],['شاهد','مُشاهِد'],['سأل','سائِل'],['اعترف','مُعترِف']],'الثلاثي على وزن فاعل، وفوق الثلاثي: مضارع ثم ميم مضمومة وكسر ما قبل الآخر.',['مُخوِّف']),
+M('أي الجمل فيها اسم فاعل من فعل ثلاثي؟',['التلميذ مُكرِمٌ معلّمَهُ','الجنديُّ حارسٌ للوطن','النجار مُتقِنٌ عملَه','المهندس مُبتكِرٌ تصميمًا'],1,'«حارس» من حرس (ثلاثي)، والباقي من أفعال فوق ثلاثية.'),
+M('اسم الفاعل من الفعل «استفاد»:',['فائِد','مُستفاد','مُستفيد','فائدة'],2,'يستفيد ← مُستفيد.'),
+M('أيٌّ مما يأتي اسم فاعل من فعل فوق ثلاثي في النص؟',['العاقل','الصالح','المُتواضِع','الحياة'],2,'المُتواضِع من تواضع، والمُتكبِّر من تكبّر.')]},
+{n:'التشبيه البليغ',ic:'💡',p:P_BAL,q:[
+M('أي الجمل تتضمن تشبيهًا بليغًا؟',['القناعة كنز في قيمتها','القناعة كالكنز','القناعة كنز','القناعة كأنها كنز'],2,'التشبيه البليغ يحذف الأداة ووجه الشبه ويبقى المشبه والمشبه به.'),
+Z('حدّد المشبه به في كل تشبيه:',[['العلم نور','نور'],['الجهل ظلام','ظلام']],'العلم مشبه ونور مشبه به؛ الجهل مشبه وظلام مشبه به.',['العلم']),
+F('حوّل «العلم كالحصن» إلى تشبيه بليغ: العلم ___ .','حصن',['كالحصن','كأنه حصن'],'نحذف أداة التشبيه فنقول: العلم حصن.'),
+T('التشبيه البليغ فيه المشبه والمشبه به فقط.',true,'صحيح.'),
+T('جملة «القناعة كالكنز» تشبيه بليغ.',false,'خطأ، لأن فيها أداة تشبيه (الكاف).')]}],
+8:[
+{n:'النص الشعري',ic:'📜',p:P_POEM8,q:[
+M('مرادف كلمة «جَلْدًا»:',['ضعيفًا','صبورًا قويًّا','مترددًا','غاضبًا'],1,'الجلد: الصبر والقوة.'),
+M('الفكرة الرئيسة للبيت الثالث:',['أهمية المال','التحلي بالصبر والسماحة والوفاء','الابتعاد عن الصعوبات','كثرة العيوب'],1,'يدعو الشاعر إلى الصبر والسماحة والوفاء.'),
+M('العلاقة بين كلمتي «السخاء» و«البخل»:',['ترادف','تضاد','تجانس','تشابه'],1,'معنيان متضادان.'),
+M('نوع الأسلوب في «ولا تجزعْ»:',['أمر','نهي','استفهام','نداء'],1,'«لا» الناهية مع الفعل المضارع المجزوم.'),
+M('المقصود بـ «فما لحوادث الدنيا بقاء»:',['الأحداث لا تتغير','المصائب تستمر','الشدائد مؤقتة ولا تدوم','يجب الخوف من المستقبل'],2,'فلا داعي للجزع.'),
+F('ينصح الشاعر عند الشدائد بـ ___ وعدم الجزع.','الصبر',['البخل','الغضب'],'لأن الشدائد لا تدوم.')]},
+{n:'القراءة المعلوماتية',ic:'📚',p:P_READ,q:[
+M('ما الفكرة الرئيسة للنص؟',['أضرار الأجهزة الذكية فقط','أهمية القراءة وفوائدها وطرق تشجيعها','أنواع الكتب','أهمية الرياضة'],1,'النص كله يدور حول القراءة.'),
+M('المقصود بتوسيع المدارك:',['زيادة المعرفة والفهم','إضاعة الوقت','الابتعاد عن التعلم','تقليل المعلومات'],0,'المدارك: العقل والفهم.'),
+M('أيٌّ مما يلي من فوائد القراءة؟',['ضعف الحصيلة اللغوية','صعوبة التعبير','تنمية التفكير والتعبير','قلة المعرفة'],2,'القراءة تنمّي التفكير والتعبير.'),
+M('مضاد كلمة «الابتعاد»:',['الانقطاع','الاقتراب','الإهمال','الانصراف'],1,'الابتعاد ضدّه الاقتراب.'),
+T('تساعد القراءة الطلاب على تحسين لغتهم وتنمية التفكير.',true,'ورد ذلك في النص.'),
+T('يرى الكاتب أن القراءة لا تفيد إلا في الدراسة.',false,'فوائدها تمتد إلى الحياة اليومية.')]},
+{n:'الحال',ic:'🎯',p:P_HAL,q:[
+Z('صنّف كل حال بحسب نوعها:',[['مبتسمًا','حال مفردة'],['وهم مستعدون لاستقباله','حال جملة اسمية'],['في هدوء','حال شبه جملة'],['وهو واثق من نفسه','حال جملة اسمية']],'المفردة اسم منصوب، وبعدها جملة اسمية تبدأ بواو الحال والضمير، وشبه الجملة جار ومجرور.',['حال جملة فعلية']),
+M('في جملة «عاد المسافر متعبًا» كلمة «متعبًا»:',['فاعل مرفوع','حال منصوب','مفعول به منصوب','خبر مرفوع'],1,'تبيّن هيئة المسافر وقت العودة.'),
+M('نوع الحال في «دخل الطلاب وهم منظمون»:',['مفردة','جملة اسمية','جملة فعلية','شبه جملة'],1,'«وهم منظمون» جملة اسمية.'),
+F('حوّل الحال إلى جملة اسمية: عاد اللاعب وهو ___ .','سعيدٌ',['سعيدًا','سعيدٍ'],'خبر مرفوع في الجملة الاسمية.'),
+T('الحال المفردة اسم منصوب يبيّن هيئة صاحبها.',true,'صحيح.')]}]};
+let g,si,qi,sc,tm,left,sel,pl,ch,done,zs,pool;const $=id=>document.getElementById(id),m=$('m'),sh=a=>[...a].sort(()=>Math.random()-.5);
+let AC;function snd(k){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const seq=k?[[523,0],[659,.12],[784,.24]]:[[300,0],[220,.15]];seq.forEach(([f,t])=>{const o=AC.createOscillator(),v=AC.createGain();o.type=k?'triangle':'sine';o.frequency.value=f;o.connect(v);v.connect(AC.destination);v.gain.setValueAtTime(.2,AC.currentTime+t);v.gain.exponentialRampToValueAtTime(.001,AC.currentTime+t+.25);o.start(AC.currentTime+t);o.stop(AC.currentTime+t+.26)})}catch(e){}}
+function home(){clearInterval(tm);m.innerHTML=`<div class="card home"><div class="big">🎓</div><h1>تحدّي اللغة العربية</h1><p>امسح الباركود بهاتفك للدخول مباشرة — بدون بريد إلكتروني وبدون شروط</p><div id="qr"></div><div><input id="lk" dir="ltr" style="font-size:.75rem;min-width:280px" onchange="mkqr(this.value)" title="رابط اللعبة"></div><h3 style="color:var(--o)">اختر مسارك</h3><div class="paths"><div class="path" onclick="start(8)">الصف الثامن<small>الشعر • القراءة المعلوماتية • الحال</small></div><div class="path" onclick="start(9)">الصف التاسع<small>الشعر • القصة • اسم الفاعل • التشبيه البليغ</small></div></div><p style="font-size:.85rem;opacity:.85">⏱️ 30 ثانية لكل سؤال • 🔊 مؤثرات صوتية • 🏆 شهادة تقدير لمن يتجاوز 70%</p></div>`;
+mkqr(LINK)}
+const LINK='https://claude.ai/artifact/W7PbjZkkZER56Q7V79Bz7i';
+function mkqr(u){u=(u||LINK).trim();$('lk').value=u;$('qr').innerHTML='';try{new QRCode($('qr'),{text:u,width:220,height:220,colorDark:'#000000',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}catch(e){$('qr').innerHTML='<div style="color:#14305c;padding:20px">تعذّر إنشاء الباركود، استخدم الرابط</div>'}}
+function start(x){g=x;si=0;qi=0;sc=D[x].map(()=>0);snd(1);Q()}
+function Q(){clearInterval(tm);const s=D[g][si],q=s.q[qi];done=0;sel=null;left=30;
+let body='';if(q.t=='m'){q.opts=sh(q.o.map((t,i)=>({t,c:i==q.a})));body=q.opts.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.t}</button>`).join('')}
+else{ch=sh(q.ch);pl=q.z.map(()=>null);body=`<div id="zs"></div><div class="pool" id="pool"></div><button class="btn" id="ck" onclick="chk()" disabled>تأكيد الإجابة</button>`}
+const qt=q.t=='z'&&q.q.includes('___')?'':q.q;
+m.innerHTML=`<div class="bar"><b>${s.ic} ${s.n} — سؤال ${qi+1}/${s.q.length}</b><span>⭐ علامة القسم: ${sc[si]}/${s.q.length}</span><span id="tt">⏱️ 30</span></div><div class="tb"><i id="tbar"></i></div><div class="grid ${s.p?'p':''}">${s.p?`<div class="pass">${s.p}</div>`:''}<div class="card"><div class="q">${qt}</div>${body}<div id="fb"></div></div></div>`;
+if(q.t=='z')draw();tm=setInterval(()=>{left--;$('tt').textContent='⏱️ '+left;$('tbar').style.width=left/30*100+'%';if(left<=0)end(false,'⏰ انتهى الوقت! ')},1000)}
+function pick(i){if(done)return;const q=D[g][si].q[qi];[...document.querySelectorAll('.opt')].forEach((b,j)=>{b.disabled=true;if(q.opts[j].c)b.classList.add('ok');else if(j==i)b.classList.add('no')});end(q.opts[i].c)}
+function draw(){const q=D[g][si].q[qi];const zh=i=>`<span class="zone" id="z${i}" ondragover="event.preventDefault()" ondrop="drop(event,${i})" onclick="zc(${i})">${pl[i]!=null?ch[pl[i]]:'&nbsp;'}</span>`;
+$('zs').innerHTML=q.q.includes('___')?`<div class="q">${q.q.replace('___',zh(0))}</div>`:q.z.map((e,i)=>`<div class="row"><b>${e[0]}</b>${zh(i)}</div>`).join('');
+$('pool').innerHTML=ch.map((c,i)=>pl.includes(i)?'':`<span class="chip ${sel==i?'s':''}" draggable="true" ondragstart="event.dataTransfer.setData('t',${i});sel=${i}" onclick="sel=sel==${i}?null:${i};draw()">${c}</span>`).join('');
+$('ck').disabled=pl.some(x=>x==null)}
+function zc(i){if(done)return;if(pl[i]!=null){pl[i]=null}else if(sel!=null){pl[i]=sel;sel=null}draw()}
+function drop(e,i){e.preventDefault();if(done||pl[i]!=null)return;pl[i]=+e.dataTransfer.getData('t');sel=null;draw()}
+function chk(){if(done)return;const q=D[g][si].q[qi];let all=true;q.z.forEach((e,i)=>{const ok=ch[pl[i]]==e[1];if(!ok)all=false;$('z'+i).classList.add(ok?'ok':'no')});end(all,all?'':'الإجابات الصحيحة: '+q.z.map(e=>(e[0]?e[0]+' ← ':'')+e[1]).join(' • ')+'<br>')}
+function end(ok,x=''){if(done)return;done=1;clearInterval(tm);const s=D[g][si];if(ok)sc[si]++;snd(ok);const msg=ok?['أحسنت! 🌟','رائع جدًا! 👏','إجابة ممتازة! 🔥'][Math.random()*3|0]:'لا بأس، حاول في الأسئلة القادمة 💪';
+$('fb').innerHTML=`<div class="fb ${ok?'ok':'no'}"><b>${msg}</b><br>${x}${s.q[qi].f}</div><button class="btn" onclick="nxt()">${qi+1<s.q.length?'السؤال التالي ◀':'نتيجة القسم ◀'}</button>`;if($('ck'))$('ck').disabled=true}
+function nxt(){const s=D[g][si];if(++qi<s.q.length)return Q();const p=sc[si]/s.q.length,st=p>=.9?'🏅 ممتاز':p>=.7?'🥈 جيد':'📘 تحتاج مراجعة';
+m.innerHTML=`<div class="card home"><div class="big">${s.ic}</div><h2>انتهى قسم «${s.n}»</h2><div class="mk">${sc[si]} / ${s.q.length}</div><h3>${st}</h3><p>${p>=.7?'أداء رائع! واصل التقدم.':'راجع النص والقاعدة ثم أعد المحاولة لاحقًا.'}</p><button class="btn" onclick="after()">${si+1<D[g].length?'القسم التالي ◀':'عرض النتيجة النهائية ◀'}</button></div>`}
+function after(){si++;qi=0;si<D[g].length?Q():fin()}
+function fin(){const tot=D[g].reduce((a,s)=>a+s.q.length,0),got=sc.reduce((a,b)=>a+b,0),pc=Math.round(got/tot*100);
+const rows=D[g].map((s,i)=>`<div class="row"><b>${s.ic} ${s.n}</b><span>${sc[i]}/${s.q.length}</span></div>`).join('');
+const lvl=pc>=90?'امتياز':pc>=70?'جيد':'';
+let c=`<h3>🔁 لم تصل بعد إلى 70%</h3><p>الشهادة تُمنح لمن يحصل على 70% فأكثر. راجع الأقسام وحاول مرة أخرى، فأنت قادر!</p>`;
+if(lvl)c=`<h3>🎉 مبارك! حصلت على شهادة بتقدير ${lvl}</h3><p>اكتب اسمك لتظهر على الشهادة:</p><input id="nm" placeholder="اسم الطالب" oninput="$('cn').textContent=this.value||'................'"><div class="cert" id="cert"><div style="color:var(--o);font-weight:700">مدرسة المدينة الأمريكية - CAS</div><h2>${pc>=90?'🏆 شهادة امتياز':'🥈 شهادة تقدير'}</h2><p>تشهد إدارة المدرسة بأن الطالب/ـة</p><div class="nm" id="cn">................</div><p>أتمّ/ت مسار مراجعة اللغة العربية للصف ${g==9?'التاسع':'الثامن'}<br>بنسبة <b>${pc}%</b> وبتقدير <b>${lvl}</b></p><p style="margin-top:22px">المعلم المشرف: أ. نبيل أحمد العاسمي<br><small>${new Date().toLocaleDateString('ar-AE')}</small></p></div><button class="btn" onclick="window.print()">🖨️ طباعة / حفظ الشهادة PDF</button>`;
+m.innerHTML=`<div class="card home"><div class="big">${lvl=='امتياز'?'🏆':lvl?'🥈':'📘'}</div><h2>النتيجة النهائية</h2><div class="mk">${pc}%</div><p>${got} من ${tot}</p>${rows}${c}<br><button class="btn" onclick="home()">العودة للرئيسية</button></div>`;snd(!!lvl)}
+home();
+</script></body></html>
